@@ -1,0 +1,25 @@
+.banners {
+
+	height: 450px;
+	margin-bottom: 30px;
+
+	.banner {
+		background-position-x: 50%;
+		background-position-y: 50%;
+		@include background-size(cover);
+
+		// Prevents FOUC
+		&.banner-1 {
+			display: block;
+		}
+
+		// Default home banners
+		@for $i from 1 through 3 {
+			&.banner-#{$i} {
+				background-image: url('#{$images-path}banners/home_#{$i}.jpg');
+				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+					src='#{$images-path}banners/home_#{$i}.jpg', sizingMethod='scale');
+			}
+		}	
+	}
+}

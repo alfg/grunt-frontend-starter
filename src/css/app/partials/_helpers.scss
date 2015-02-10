@@ -1,0 +1,59 @@
+/*
+ *
+ * All utility classes */
+
+
+// Full width grid
+.row.full-width {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+// Text Decorations
+.text-italic {
+	font-style: italic; }
+
+.text-bold {
+	font-weight: bold;
+}
+
+// Lists
+ul.unstyled {
+	list-style: none;
+	margin-left: 0;
+}
+
+// Span helpers
+.span-50 {
+	width: 50%;
+}
+
+// Padding helpers
+.padding-30 {
+	padding: 30px;
+}
+
+// function for calculating power ($b - base, $n - power) (Sass v3.3 has already an integrated pow() function for this):
+// thisone is made for power >= 0
+@function pwr($b, $n) {
+  $f: if($n <= 0, 1, $b);
+  @while $n > 1 {
+    $f: $f * $b;
+    $n: $n - 1;
+  }
+  @return $f;
+}
+
+// a zerofill function to fill $i with zeros to length $n:
+@function zerofill($i, $n){
+  $f: pwr(10, $n - 1);
+  $out: null;
+  @while $f >= 1 {
+    $out: $out#{floor($i / $f)};
+    $i: $i - floor($i / $f) * $f;
+    $f: $f / 10;
+  }
+  @return $out;
+}
