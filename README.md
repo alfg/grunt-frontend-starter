@@ -16,7 +16,6 @@ utilties and easy support for layouts/partials. Modular enough to easily remove 
 - IE8 Polyfill plugins
 - Sample foundation banner template with carousel
 
-
 The easiest way to get started with Grunt/Assemble. 
 
 ## Requirements
@@ -29,9 +28,12 @@ The easiest way to get started with Grunt/Assemble.
 
   * Clone repo 
   * `cd` to directory and run `npm install`
-  * Update package.json to reflect your project name/settings.
-  
-Then when you're working on your project, just run any of the commands:
+  * Update package.json to reflect your project name/settings
+  * Run `grunt serve` and load `http://127.0.0.1:8000` in your browser
+ 
+All output will be compiled into the `_site` folder. So you can simply upload the entire contents to any static host.
+
+Extra built-in options:
 
 * `grunt` will compile your site into the "./_site" directory
 * `grunt serve` will start a server at http://localhost:8000 and watch for changes
