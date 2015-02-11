@@ -6,6 +6,7 @@
 	.banner {
 		background-position-x: 50%;
 		background-position-y: 50%;
+		height: 450px;
 		@include background-size(cover);
 
 		// Prevents FOUC
