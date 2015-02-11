@@ -1,4 +1,4 @@
-# Grunt-Frontend-Starter 
+# grunt-frontend-starter 
 
 A sample frontend project template built with grunt and foundation. Features common frontend
 utilties and easy support for layouts/partials. Modular enough to easily remove or add in anything.
